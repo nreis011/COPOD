@@ -19,11 +19,11 @@ for j in range (0, 7480):
 
     calib = Calibration(calib_path)
     points = utils.load_point_clouds(points_path)
-    bboxes = utils.load_3d_boxes(label_path, 'pedestrian')
+    bboxes = utils.load_3d_boxes(label_path, 'truck')
     if len(bboxes != 0):
-        if (os.path.exists('output/pedestrian/') == False):
-            os.makedirs('output/pedestrian/points/')
-            os.makedirs('output/pedestrian/boxes/')
+        if (os.path.exists('output/truck/') == False):
+            os.makedirs('output/truck/points/')
+            os.makedirs('output/truck/boxes/')
 
         bboxes = calib.bbox_rect_to_lidar(bboxes)
 
@@ -38,8 +38,8 @@ for j in range (0, 7480):
                 box = bboxes[i]
                 points_canonical, box_canonical = utils.points_to_canonical(p, box)
                 points_canonical, box_canonical = utils.lidar_to_shapenet(points_canonical, box_canonical)
-                pts_name = 'output/{}/points/{}_point_{}'.format('pedestrian', n, idx)
-                box_name = 'output/{}/boxes/{}_bbox_{}'.format('pedestrian', n, idx)
+                pts_name = 'output/{}/points/{}_point_{}'.format('truck', n, idx)
+                box_name = 'output/{}/boxes/{}_bbox_{}'.format('truck', n, idx)
                 #pts_name = 'output/{}_{}_point_{}'.format(args.idx, args.category, i)
                 #box_name = 'output/{}_{}_bbox_{}'.format(args.idx, args.category, i)
                 utils.write_points(points_canonical, pts_name)
