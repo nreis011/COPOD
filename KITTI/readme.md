@@ -18,8 +18,8 @@ Run the notebooks in the following order:
 extract.ipynb
 collectgrtuth.ipynb
 copod_x.ipynb
-analyze_x.ipynb
+analyze.ipynb
 
 visualize.ipynb serves to visualize individual bounding boxes both individually and in the context of the wider point cloud.
 
-The overall structure and function is the same as in the Olivia dataset but with adaptations for KITTI's structure.
+The overall structure and function is the same as in the Olivia dataset but with adaptations for KITTI's folder structure.
