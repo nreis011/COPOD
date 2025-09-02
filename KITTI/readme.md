@@ -1,25 +1,26 @@
 # KITTI DATASET folder
 
 ### Folder Structure:
-
+```
 Parent Folder:
     - Scripts and Notebooks
-    - Folder: kitti
+    - kitti
         - training
             - calib
             - label_2
             - velodyne
-    - Folder: output
+    - output
+```
 
-The kitti folder is where to place all the kitti dataset files. Using only the training data, it should look as outlined above.
-Outputs stores the output from running a notebook, these folders are created automatically.
+Place all files belonging to the KITTI dataset within the "kitti" folder. Use onlytraining data.\
+Outputs are stored within the "output" folder which is created automatically.
 
 Run the notebooks in the following order:
-extract.ipynb
-collectgrtuth.ipynb
-copod_x.ipynb
-analyze.ipynb
+extract.ipynb\
+collectgrtuth.ipynb\
+copod_x.ipynb\
+analyze.ipynb\
 
-visualize.ipynb serves to visualize individual bounding boxes both individually and in the context of the wider point cloud.
+visualize.ipynb serves to visualize individual bounding boxes.
 
-The overall structure and function is the same as in the Olivia dataset but with adaptations for KITTI's folder structure.
+The overall structure and function is the same as the Olivia dataset's but with adaptations for KITTI's folder structure.
